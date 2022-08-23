@@ -28,7 +28,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     @ApiOperation(value = "查询新用户")
-    public ResponseEntity<?> one(@ApiParam(value = "用户id") @PathVariable String id) {
+    public ResponseEntity<?> one(@ApiParam(value = "用户id",required = true) @PathVariable String id) {
         User user = new User();
         user.setId(1L);
         user.setName("chan");
